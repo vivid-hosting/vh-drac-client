@@ -1,8 +1,13 @@
 #!/bin/bash
 
 echo -n 'Host: '
-read drachost
+if [ -z "$1" ]; then
+	read drachost
+else
+	drachost=$1
+fi
 
+echo $drachost
 dracuser="vividhosting"
 
 echo -n 'Password: '
